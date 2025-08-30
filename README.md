@@ -1,0 +1,1 @@
+-	Developed a Python-based structural health monitoring tool performing modal analysis on a 3 story shear frame to study live load variations and corrosion effects (NumPy, SciPy, Matplotlib).
