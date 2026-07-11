@@ -72,11 +72,25 @@ After 20 years at 0.25 mm/year, the corroded flange loses **0.197 in** of thickn
 | Centroid from bottom | 7.25 in | 6.699 in |
 | Moment of inertia `I` | 1380 in⁴ | 1247 in⁴ (**−9.6%**) |
 
-These updated section properties are fed back into the stiffness matrix to reassess the frame's modal response.
+These updated section properties are fed back into the stiffness matrix to reassess the frame's modal response, yielding the corroded mode shapes and frequencies below.
+
+<p align="center">
+  <img src="figures/corroded_mode_shapes.png" alt="Mode shapes of the corroded frame after 20 years" width="90%">
+</p>
 
 ### Task 3 — SHM interpretation
 
-The healthy and corroded states are compared through their mass matrices, stiffness matrices, natural frequencies, and mode shapes to assess whether modal-analysis-based SHM can flag corrosion progression for this frame. The full comparison — matrices, frequencies, and mode-shape overlays — is generated in [`main.ipynb`](./main.ipynb).
+The healthy and corroded states are compared through their natural frequencies and mode shapes to assess whether modal-analysis-based SHM can flag corrosion progression for this frame.
+
+<p align="center">
+  <img src="figures/frequency_comparison.png" alt="Modal frequency comparison: healthy vs. corroded" width="55%">
+</p>
+
+<p align="center">
+  <img src="figures/mode_shape_comparison.png" alt="Mode shape comparison: healthy vs. corroded" width="90%">
+</p>
+
+The comparison shows that the third mode shape is the most sensitive indicator of the localized Story-1 damage, while the fundamental mode shape is nearly unchanged. The full numerical comparison — mass and stiffness matrices, frequencies, and per-element percentage differences — is generated in [`main.ipynb`](./main.ipynb).
 
 ## Methodology
 
@@ -121,8 +135,11 @@ structural-health-monitoring-corrsion-aware/
 ├── main.ipynb                        # Full analysis: Tasks 1–3
 ├── ReadMe_Structural Dynamics.pdf    # Problem statement
 ├── figures/                          # Figures used in this README
-│   ├── mode_shapes.png
-│   └── frequency_vs_liveload.png
+│   ├── mode_shapes.png               # Task 1: mode shapes
+│   ├── frequency_vs_liveload.png     # Task 1: frequency vs. live load
+│   ├── corroded_mode_shapes.png      # Task 2: corroded mode shapes
+│   ├── frequency_comparison.png      # Task 3: healthy vs. corroded frequencies
+│   └── mode_shape_comparison.png     # Task 3: healthy vs. corroded mode shapes
 ├── requirements.txt                  # Python dependencies
 ├── CITATION.cff                      # Citation metadata
 ├── LICENSE                           # MIT License
