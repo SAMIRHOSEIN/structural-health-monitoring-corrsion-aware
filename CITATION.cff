@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Corrosion-Aware Structural Health Monitoring via Modal Analysis of a 3-Story Shear Frame"
+type: software
+authors:
+  - family-names: "Moayyedi"
+    given-names: "Amir"
+    email: "s.amir.h.moayyedi@gmail.com"
+keywords:
+  - structural-health-monitoring
+  - modal-analysis
+  - structural-dynamics
+  - civil-engineering
+  - corrosion
+  - damage-detection
+  - shear-frame
+license: MIT
+repository-code: "https://github.com/samirhosein/structural-health-monitoring-corrsion-aware"
